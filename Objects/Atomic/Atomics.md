@@ -24,15 +24,29 @@ It can prevent the data race condition.
         rather than x=new Atomic(); x.Add(); 
 
 ## Static methods
-
-1. Atomics.add()
-
-2. Atomics.and()
-
 ### Atomics.add()
 
 #### intro
-Add a new key (, or said, index) k and its corresponding value v into the array arr, then returning the old array.
+Plus a new key (, or said, index) k with its corresponding value v into the array arr, then returning the old array.
+
+#### Parameters
+    Atomics.add(k,v,arr)
+
+where
+
+     k: key indicated the index for insertion of the array arr.
+
+     v: value of the corresponding key. The value v will be inserted into the array arr.
+
+     arr: The specified array.
+
+#### Return value
+     The old array arr.
+     
+### Atomics.sub()
+
+#### intro
+Subtracting a new key (, or said, index) k with its corresponding value v into the array arr, then returning the old array.
 
 #### Parameters
     Atomics.add(k,v,arr)
