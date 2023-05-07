@@ -48,7 +48,7 @@ where
      arr: The specified array.
 
 #### Return value
-The old array arr.
+     The old array arr.
 
 
 
