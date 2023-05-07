@@ -93,7 +93,8 @@ Here, I use regular expression to express the evaluation of this method.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and
 
 ### Atomics.load()
-
+#### intro
+    It returns the corresponding value of the specified index idx.
 #### Parameters
     Atomics.load(arr, idx)
     
@@ -112,15 +113,46 @@ where
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load
 
+### Atomics.or()
+#### intro
+
+Evaluate them with bitwise and operation for the value which corresponds to the key k and the given value
+
+, then writes the result back to the value which corresponds to the key k in the specified array arr.
+
+#### Parameters
+    Atomics.and(arr,k,v)
+
+where
+
+     k: key that indiciate the index for the first operand.
+
+     v: value of second operand. 
+
+     arr: The specified array.
+
+Here, I use regular expression to express the evaluation of this method.
+
+     <old_value> := v
+     
+     <first_operand> := arr[k]
+     
+     <second_oeprand> := v
+     
+     <new_value> := <first_operand> /| <second_oeprand>
+     
+     <return_value> := <old_value>
+     
+     arr[k] := <first_operand>
+     
+     / is the espace letter.
+     
+     | represents bitwise OR.
+     
+#### Return value
+     The old array arr.
+
 ## Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics
-
-
-
-
-
-
-
-
 
 
