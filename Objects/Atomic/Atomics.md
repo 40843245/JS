@@ -177,6 +177,35 @@ where
 #### Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store
 
+### Atomics.wait()
+#### intro
+It sleeps, awaiting a wake-up notification or times out iff it is true that given position in an Int32Array still contains a given value.
+
+#### Note
+This operation only works with a shared Int32Array or BigInt64Array and may not be allowed on the main thread. 
+
+For a non-blocking, asynchronous version of this method, see Atomics.waitAsync().
+
+### Syntax
+
+    Atomics.wait(typedArray, index, value)
+    Atomics.wait(typedArray, index, value, timeout)
+
+#### Parameter
+    typedArray : A specified array it should be either shared Int32Array or BigInt64Array.
+    
+    index : The position in the typedArray to wait on.
+    
+    value : The expected value to test. 
+    
+    timeout : time to wait in milliseconds. It is assume to positive infinity, if it is specified. 
+    
+    That means, it will wait forever unless the wake-up notification is recieved.
+    
+#### Ref
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait
+    
+    
 ## Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics
 
