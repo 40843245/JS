@@ -49,7 +49,7 @@ where
 Subtracting a new key (, or said, index) k with its corresponding value v into the array arr, then returning the old array.
 
 #### Parameters
-    Atomics.add(k,v,arr)
+    Atomics.sub(k,v,arr)
 
 where
 
@@ -106,27 +106,6 @@ Here, I use regular expression to express the evaluation of this method.
 #### Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and
 
-### Atomics.load()
-#### intro
-    It returns the corresponding value of the specified index idx.
-#### Parameters
-    Atomics.load(arr, idx)
-    
-where 
-   
-     arr : the specified array arr.
-     
-     index : the index idx indiciates to return the corresponding value.
-     
-#### Return value
-     The corresponding value of the index idx in the array arr.
-     
-     <return_value> := arr[idx]
-       
-#### Ref
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load
-
 ### Atomics.or()
 #### intro
 
@@ -169,6 +148,26 @@ Here, I use regular expression to express the evaluation of this method.
 #### Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or
 
+### Atomics.load()
+#### intro
+    It returns the corresponding value of the specified index idx.
+#### Parameters
+    Atomics.load(arr, idx)
+    
+where 
+   
+     arr : the specified array arr.
+     
+     index : the index idx indiciates to return the corresponding value.
+     
+#### Return value
+     The corresponding value of the index idx in the array arr.
+     
+     <return_value> := arr[idx]
+       
+#### Ref
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load
+
 ### Atomics.store()
 #### intro
 It stores a given value at the given position in the array and returns that value.
@@ -184,8 +183,7 @@ where
     
     v : the value v will be stored.
    
-#### Return value
-  
+#### Return value  
      Return value v.
   
 #### Ref
@@ -226,42 +224,41 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 #### Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 
+### Atomics.notify()
 #### intro
-Evaluate them with bitwise xor operation for the value which corresponds to the key k and the given value
+Notify up some agents that are sleeping in the waiting queue.
 
-, then writes the result back to the value which corresponds to the key k in the specified array arr.
+#### NOTE
+This operation works with a shared Int32Array only. 
+
+It will return 0 on non-shared ArrayBuffer objects!!!
+
+It will return 0 on non-shared ArrayBuffer objects!!!
+
+It will return 0 on non-shared ArrayBuffer objects!!!
 
 #### Parameters
-    Atomics.xor(arr,k,v)
+    Atomics.notify(typedArray, index, count)
+
 
 where
 
-     k: key that indiciate the index for the first operand.
+     typedArray : A specified array. It should be a shared Int32Array.
 
-     v: value of second operand. 
+     index : The position in the typedArray to wake up on.
 
-     arr: The specified array.
+     count : The number of sleeping agents to notify. It is assume to positive infinity if it is NOT specified.
 
-Here, I use regular expression to express the evaluation of this method.
+#### Return value
+There are two cases.
 
-     <old_value> := v
+     Returns the number of woken up agents.
      
-     <first_operand> := arr[k]
+     Returns 0, if a non-shared ArrayBuffer object is used. This case is trivial.
      
-     <second_oeprand> := v
-     
-     <new_value> := <first_operand> ^ <second_oeprand>
-     
-     <return_value> := <old_value>
-     
-     arr[k] := <first_operand>
-   
-     ^ represents bitwise xor
-
 #### Ref
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor
-
-
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify
+     
 ## Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics
 
