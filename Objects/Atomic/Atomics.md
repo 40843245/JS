@@ -151,6 +151,10 @@ Here, I use regular expression to express the evaluation of this method.
      
 #### Return value
      The old array arr.
+     
+#### Ref
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or
 
 ## Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics
