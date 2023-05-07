@@ -153,8 +153,29 @@ Here, I use regular expression to express the evaluation of this method.
      The old array arr.
      
 #### Ref
-
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or
+
+### Atomics.store()
+#### intro
+It stores a given value at the given position in the array and returns that value.
+
+#### Parameter
+    Atomics.store(arr,k,v)
+ 
+where 
+    
+    arr : the specified arr.
+    
+    k : the key k indiciate the position to store.
+    
+    v : the value v will be stored.
+   
+#### Return value
+  
+     Return value v.
+  
+#### Ref
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store
 
 ## Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics
