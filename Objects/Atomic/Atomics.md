@@ -116,7 +116,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 ### Atomics.or()
 #### intro
 
-Evaluate them with bitwise and operation for the value which corresponds to the key k and the given value
+Evaluate them with bitwise or operation for the value which corresponds to the key k and the given value
 
 , then writes the result back to the value which corresponds to the key k in the specified array arr.
 
@@ -205,7 +205,49 @@ For a non-blocking, asynchronous version of this method, see Atomics.waitAsync()
 #### Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait
     
+### Atomics.waitAsync()
+#### intro
+    Asynchronously, non-blocking version of Atomics.wait()
     
+#### Ref
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
+
+#### intro
+Evaluate them with bitwise xor operation for the value which corresponds to the key k and the given value
+
+, then writes the result back to the value which corresponds to the key k in the specified array arr.
+
+#### Parameters
+    Atomics.xor(arr,k,v)
+
+where
+
+     k: key that indiciate the index for the first operand.
+
+     v: value of second operand. 
+
+     arr: The specified array.
+
+Here, I use regular expression to express the evaluation of this method.
+
+     <old_value> := v
+     
+     <first_operand> := arr[k]
+     
+     <second_oeprand> := v
+     
+     <new_value> := <first_operand> ^ <second_oeprand>
+     
+     <return_value> := <old_value>
+     
+     arr[k] := <first_operand>
+   
+     ^ represents bitwise xor
+
+#### Ref
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor
+
+
 ## Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics
 
