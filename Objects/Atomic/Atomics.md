@@ -1,11 +1,9 @@
-# Atomic object in JS
+# Atomic object in JS -- Atomics
 ## Prequisite
 1. basic syntax of JS.
 2. basic concept of OOP.
 3. basic concept of static class.
 4. All prequisites in my notes (such as atomic operation).
-
-
 
 ## Recall
 1. Atomic operation
@@ -90,11 +88,29 @@ Here, I use regular expression to express the evaluation of this method.
      
 #### Return value
      The old array arr.
-#### NOTE
-
 
 #### Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and
+
+### Atomics.load()
+
+#### Parameters
+    Atomics.load(arr, idx)
+    
+where 
+   
+     arr : the specified array arr.
+     
+     index : the index idx indiciates to return the corresponding value.
+     
+#### Return value
+     The corresponding value of the index idx in the array arr.
+     
+     <return_value> := arr[idx]
+       
+#### Ref
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load
 
 ## Ref
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics
