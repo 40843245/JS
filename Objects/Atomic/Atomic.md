@@ -37,15 +37,15 @@ It can prevent the data race condition.
 Add a new key (, or said, index) k and its corresponding value v into the array arr, then returning the old array.
 
 #### Parameters
-Atomics.add(k,v,arr)
+    Atomics.add(k,v,arr)
 
 where
 
-k: key that will be insert into the array arr.
+     k: key that will be insert into the array arr.
 
-v: value of the corresponding key.
+     v: value of the corresponding key.
 
-arr: The specified array.
+     arr: The specified array.
 
 #### Return value
 The old array arr.
