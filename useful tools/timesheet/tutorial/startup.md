@@ -1,8 +1,8 @@
 # timesheet
 ## Objective
 This article talks about startup of the useful tool timesheet in JS.
-## Prepare
-To startup, either do the following way, then import it in the .html file.
+## Download
+To startup, download it with either the following way, then import it in the .html file.
 ### bower
 install the git with bower with following command.
     
@@ -29,6 +29,11 @@ For the reason, see my other articles in GitHub.
 
 https://github.com/40843245/HTML/blob/main/File/File%20import/tutorial.md
 
+## Directory
+After installing the library, you should see these files in your project, the following figure depicts the structore of the downloaded files.
+
+https://github.com/40843245/JS/blob/main/useful%20tools/timesheet/tutorial/screenshot/directory_screenshot_1.png
+
 ## Create a new Timesheet
 To create a new timesheet, just instantiate the object -- Timesheet.
 Such as the following example.
@@ -46,7 +51,16 @@ Such as the following example.
                 ['02/2010', '05/2010', 'LOST Season #5', 'lorem'],
                 ['09/2008', '06/2010', 'FRINGE #1 & #2', 'ipsum']
                 ]);
-    
+ ## Example
+ ### HTML Code and Project
+ See the zip file
+ 
+ https://github.com/40843245/JS/blob/main/useful%20tools/timesheet/tutorial/project/zip/TimeSheet.7z
+ 
+ ## Result
+ 
+https://github.com/40843245/JS/blob/main/useful%20tools/timesheet/tutorial/screenshot/ex_1.png
+
 ## Ref
 
 In GitHub:
