@@ -27,6 +27,8 @@ instead of
 
 For the reason, see my other articles in GitHub.
 
+https://github.com/40843245/HTML/blob/main/File/File%20import/tutorial.md
+
 ## Ref
 
 In GitHub:
