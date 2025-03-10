@@ -20,7 +20,7 @@ npm command-line tool is fully installed by default when installing Node.JS from
 > [!WARNING]
 > If you want to use `npm` command in terminal other than `DOS command-line prompt`.
 >
-> Please add the location of `npm.exe` to environment system variable - `PATH`.
+> Please add the location of `npm.cmd` to environment system variable - `PATH`.
  
 ## verify npm command-line tool s fully installed
 You can verify it in `npm` command in terminal.
